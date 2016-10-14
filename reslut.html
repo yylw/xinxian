@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport"content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<title>第七页</title>
+	<link rel="stylesheet" href="css/result.css">
+	<link rel="stylesheet" type="text/css" href="css/quanju.css">
+</head>
+</head>
+<body>
+	<div class="container">
+		<header class="header">
+			<a href="#">< 返回</a>
+			<h1>新鲜制造</h1>
+			<a href="#"><img src="img/e_05.png" width="31" height="20"></a>
+		</header>
+		<section class="nav">
+			<a href="#" class="return"><img src="img/w_03.png" width="12" height="25"></a>
+			<h2>平和质</h2>
+		</section>                    
+		<section class="main">
+			
+			<div class="ul2">
+				
+				<h1>您的体质为：平和质,偏阴虚</h1>	
+				
+				<ol>
+					<li><label>总体特征：</label><span>阴阳气血调和,以体态适中、面色红润、精力充沛、等为特征。</span></li>
+					<li><label>体型特征：</label><span>体型匀称健壮</span></li>
+					<li><label>常见表现：</label><span>面色、肤色润泽、头发稠密有光泽、目光有神，嗅觉通灵，鼻色明润，嗅觉通灵，唇色红润，不易疲劳，精力充沛，耐受寒热，睡眠良好，胃耐佳，二便正常，舌色淡红，苔薄白，脉和缓有力。</span></li>
+					<li><label>心里特征:</label><span>性格随和开朗</span></li>
+					<li><label>发病倾向:</label><span>平素患病较少</span></li>
+					<li><label>对外界环境适应能力:</label><span>对自然环境和社会环境适应能力较强</span></li>
+					<div class="smallbox">
+				<p><img src="img/wn.png" width="10" height="10">平和质，是什么意思?</p>
+				<ol>
+					<li>令人羡慕，只占中国人群的30%左右</li>
+					<li>令人羡慕，只占中国人群的30%左右</li>
+					<li>令人羡慕，只占中国人群的30%左右</li>
+					<li>令人羡慕，只占中国人群的30%左右</li>
+				</ol>
+				<p><img src="img/wn.png" width="10" height="10">平和质，是什么意思?</p>
+				<ol>
+					<li>令人羡慕，只占中国人群的30%左右</li>
+					<li>令人羡慕，只占中国人群的30%左右</li>
+					<li>令人羡慕，只占中国人群的30%左右</li>
+					<li>令人羡慕，只占中国人群的30%左右</li>
+				</ol>
+			</div>
+					<p class="p">阅读全文<span>∨</span></p>
+				</ol>
+			</div>
+			 
+			<ul id="ul1">
+				<li>
+					<h4>您的体质为:</h4>
+					<h2>平和质 偏阴虚</h2>
+					<p>阴阳气血调和，以体态适中、面色红润、精</p>
+					<p>力充沛等为主要特征。</p>
+					<img src="img/btn1.png" id="btn1">
+				</li>
+				<li>宜食<span id="btn2">></span></li>
+				<!-- <li>不宜食<span id="btn3">></span></li> -->
+			</ul>
+			<div class="eat">
+				<img src="img/eat.png">
+				<img src="img/eat_1.png">
+				<img src="img/eat_1.png">
+				<img src="img/eat_no.png">
+			</div>
+		</section>
+	</div>
+	<script src="js/jquery1.7.js"></script>
+	
+	<script>
+		//展开1
+		$("#btn1").on("click",function(){
+			$("#ul1>li").eq(0).hide();
+			$(".ul2").show();
+		})
+		i=true;
+		$(".p").on("click",function(){
+			if(i){
+				$(".smallbox").show();
+			    $(".p").html("收起∧");
+			    i=false;
+			}else{
+				$(".smallbox").hide();
+			    $(".p").html("阅读全文∨");
+			    i=true;
+			}			
+		})
+		//展开2	
+		$("#btn2").on("click",function(){	
+			$(".eat").show();
+		})
+		i=true;
+		$("#btn2").on("click",function(){
+			if(i){
+				$(".eat").show();
+			    $("#btn2").html("∨");
+			    i=false;
+			}else{
+				$(".eat").hide();
+			    $("#btn2").html(">");
+			    i=true;
+			}			
+		})	
+		//页面跳转
+		$(".return").on("click",function($){
+			location.href="problem.html"
+		})
+	</script>
+</body>
+</html>

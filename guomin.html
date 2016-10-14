@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport"content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<title>第四页</title>
+	<link rel="stylesheet" href="css/ill.css">
+	<link rel="stylesheet" type="text/css" href="css/quanju.css">
+</head>
+<body>
+	<div class="container">
+		<header class="header">
+			<a href="#" class="return">< 返回</a>
+			<h1>新鲜智造</h1>
+			<a href="#"><img src="img/e_05.png" width="31" height="20"></a>
+		</header>
+		<section class="nav">
+			<a href="#" class="return"><img src="img/w_03.png" width="12" height="25"></a>
+			<h2>基本信息</h2>
+		</section>
+		<div class="Bmain">
+		<section class="main">
+			<h1>有无过敏食物</h1>
+			<p class="text">
+				<span><em class="none"></em>无</span>
+				<span><em class="block"></em>有</span>
+			</p>
+			<ul id="ul" class="ul">
+				<li>
+					<span>羊肉</span><span>海鲜</span><span>芹菜</span>
+				</li>
+				<li>
+					<span>胡萝卜</span><span>芹菜</span><span>芹菜</span>
+				</li>
+				<li>
+					<span>羊肉</span>
+				</li>
+			</ul>
+			<h5 id="btn">继续</h5>
+		</section>
+		</div>
+	</div>
+	<script src="js/jquery1.7.js"></script>
+	<script src="js/add.js"></script>
+	<script type="text/javascript">
+	//页面跳转
+		$("#btn").on("click",function($) {
+			location.href="food.html"	
+		})
+		$(".return").on("click",function($){
+			location.href="ill.html"
+		})
+		
+	</script>
+</body>
+</html>

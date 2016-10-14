@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+.full {
+  width: 100%;
+  height: 100%;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+html,
+body,
+.box {
+  width: 100%;
+  height: 100%;
+  background: #F6F6F6;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  background: #f6514b;
+}
+.header {
+  height: 45px;
+  width: 100%;
+  background: #1B1B20;
+}
+.header h1 {
+  width: 60%;
+  font-size: 20px;
+  text-align: center;
+  line-height: 45px;
+  float: left;
+  color: #fff;
+}
+.header a {
+  color: #fff;
+  font-size: 14px;
+  line-height: 45px;
+  display: block;
+  height: 45px;
+  float: left;
+  text-align: center;
+}
+.header a:nth-of-type(1) {
+  width: 20%;
+}
+.header a:nth-of-type(2) {
+  width: 15%;
+  float: right;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.nav {
+  height: 45px;
+  width: 100%;
+  background: #fff;
+}
+.nav h2 {
+  color: #333;
+  font-size: 18px;
+  float: left;
+  width: 55%;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+}
+.nav a {
+  color: #999;
+  font-size: 18px;
+  width: 20%;
+  height: 45px;
+  display: block;
+  float: left;
+  line-height: 50px;
+  margin-left: 10px;
+}
+.Bmain {
+  width: 100%;
+  height: 100%;
+  -webkit-flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.main {
+  width: 100%;
+  height: 90%;
+  background: url(../img/bg2.png) no-repeat;
+  background-size: 100% 100%;
+  margin-top: 20px;
+  position: absolute;
+}
+.main p img {
+  width: 8px;
+  height: 11px;
+}
+.main ul {
+  width: 90%;
+  height: 100%;
+  margin-left: 5%;
+}
+.main ul li {
+  width: 100%;
+  height: 15%;
+  display: block;
+}
+.main .p {
+  color: #454545;
+  font-size: 14px;
+  width: 100%;
+  padding-top: 20px;
+  margin-left: 5px;
+}
+.main .span {
+  width: 100%;
+  float: left;
+  padding-top: 10px;
+  margin-left: 5px;
+}
+.main .span span {
+  width: 16%;
+  height: 13%;
+  display: block;
+  border: 1px solid #666;
+  float: left;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 3px;
+  margin: 0 4px;
+  color: #706f6c;
+  font-size: 10px;
+}
+.main .span span.bg {
+  color: #fff;
+  background: #f6514b;
+  border: 1px solid #f6514b;
+}
+.main h5 {
+  position: absolute;
+  bottom: 5%;
+  left: 45%;
+  color: #b00600;
+  font-size: 18px;
+}

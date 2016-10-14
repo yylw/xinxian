@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport"content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<title>第五页</title>
+	<link rel="stylesheet" href="css/food.css">
+	<link rel="stylesheet" type="text/css" href="css/quanju.css">
+</head>
+<body>
+	<div class="container">
+		<header class="header">
+			<a href="#">< 返回</a>
+			<h1>新鲜制造</h1>
+			<a href="#"><img src="img/e_05.png" width="31" height="20"></a>
+		</header>
+		<section class="nav">
+			<a href="#" class="return"><img src="img/w_03.png" width="12" height="25"></a>
+			<h2>基本信息</h2>
+		</section>
+		<div class="Bmain">
+		<section class="main">
+			<h1>不喜欢吃的食物</h1>
+			<ul class="text">
+				<li><em></em>羊肉</li>
+				<li><em></em>海鲜</li>
+				<li><em></em>芹菜</li>
+				<li><em></em>胡萝卜</li>
+				<li><em></em>韭菜</li>
+				
+			</ul>
+			<ul class="text">
+				<li><em></em>西瓜</li>
+				<li><em></em>洋葱</li>
+				<li><em></em>芹菜</li>
+				<li><em></em>胡萝卜</li>
+				<li><em></em>韭菜</li>
+				
+			</ul>
+			<h5 id="btn">开始测试</h5>
+		</section>
+		</div>
+		<div class="box" id="box">
+		  <div class="Sbox">
+			<h1 id="close">×</h1>
+			<p>亲,我们为您准备了60道体质测试题,请耐心如实答题,获取真实体质结果</p>
+			<h5 id="start">开始测试</h5>
+		  </div>
+		</div>
+	</div>
+	<script src="js/jquery1.7.js"></script>	
+	<script type="text/javascript">
+	//遮罩层
+		$("#btn").on("click",function() {
+			$('<div class="markbg" id="mark-bg"></div>').height($("body").height()).appendTo($("body"));
+			var $panal=$("#box");
+                $panal.css({"display":"block"});
+		})
+		$("#close").on("click",function(){
+			$("#mark-bg").remove();
+            $("#box").css("display","none");
+		})
+	 //跳转页面
+		$("#start").on("click",function(){
+			location.href="problem.html"
+		})
+		$(".return").on("click",function($){
+			location.href="guomin.html"
+		})
+		//按钮样式
+		$(".text li em").on("click",function(){
+			 $(this).addClass("checked")
+		})
+	</script>
+
+</body>
+</html>

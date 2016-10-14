@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport"content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	<title>第六页</title>
+	<link rel="stylesheet" href="css/problem.css">
+	<link rel="stylesheet" type="text/css" href="css/quanju.css">
+</head>
+<body>
+	<div class="container">
+		<header class="header">
+			<a href="#">< 返回</a>
+			<h1>新鲜制造</h1>
+			<a href="#"><img src="img/e_05.png" width="31" height="20"></a>
+		</header>
+		<section class="nav">
+			<a href="#" class="return"><img src="img/w_03.png" width="12" height="25"></a>
+			<h2>您感觉？</h2>
+		</section>
+		<div class="Bmain">
+		<section class="main">
+		 <ul id="item">
+		   <!--<li>
+				 <p class="p">
+					<img src="img/f_05.png">
+					您的皮肤一抓就红,并出现抓痕吗?
+				</p>
+				<p class="span" id="span">
+					<span>没有</span><span>很少</span>
+					<span>有时</span><span>经常</span>
+					<span>总是</span>
+				</p>
+							</li>
+							<li>
+				<p class="p">
+					<img src="img/f_05.png">
+					您平时痰多特别是咽喉部总感觉有痰堵着吗?
+				</p>
+				<p class="span">
+					<span>没有</span><span>很少</span>
+					<span>有时</span><span>经常</span>
+					<span>总是</span>
+				</p>
+							</li>
+							<li>
+				<p class="p">
+					<img src="img/f_05.png">
+					您吃(喝)凉的东西会感觉到不舒服或者怕吃(</br>&nbsp&nbsp喝)凉的东西吗?
+				</p>
+				<p class="span">
+					<span>没有</span><span>很少</span>
+					<span>有时</span><span>经常</span>
+					<span>总是</span>
+				</p>
+							</li>
+							<li>
+				<p class="p">
+					<img src="img/f_05.png">
+					您的皮肤一抓就红,并出现抓痕吗?
+				</p>
+				<p class="span">
+					<span>没有</span><span>很少</span>
+					<span>有时</span><span>经常</span>
+					<span>总是</span>
+				</p>
+							</li>
+							<li>
+				<p class="p">
+					<img src="img/f_05.png">
+					您平时痰多特别是咽喉部总感觉有痰堵着吗?
+				</p>
+				<p class="span">
+					<span>没有</span><span>很少</span>
+					<span>有时</span><span>经常</span>
+					<span>总是</span>
+				</p>
+							</li> -->
+		</ul>
+		<h5 id="btn">提交</h5>
+		</section>
+		</div>
+	</div>
+	<script src="js/zepto.min.js"></script>
+	<script src="js/jquery1.7.js"></script>
+	<script src="js/js.js"></script>
+	<script type="text/javascript">
+     //提交判断
+        var  obj={},id,count;
+		$("#btn").on("click",function(){
+			var len=$("#item .bg").size();
+			$('#item li span').each(function(){
+                if($(this).hasClass('bg')){
+                   count=$(this).data('count'),
+                   id=$(this).parent().siblings('.p').data('id');
+                   obj[id]=count;
+                   
+                }
+			})
+			//console.log(obj)
+			//if(len<5) return false;
+			if(len<5){
+				alert("还有"+(5-len)+"道题没做！！!");
+				return false;
+			}
+			if(len==5){
+				 $.ajax({
+				 	url:'js/registersubmit.php',
+				 	type:'post',
+				 	dataType:'json',
+				 	data:obj,
+				 	success:function(data){
+                       console.log(data);
+                       var  errcode=data.result.errcode;
+                       if(errcode==0){
+
+                       	location.href="reslut.html";
+                       }
+				 	}
+				 })
+			}
+			//
+		})
+		
+	//页面跳转
+		$(".return").on("click",function($){
+			location.href="food.html"
+		})
+		
+	</script>
+</body>
+</html>
